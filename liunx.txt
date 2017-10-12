@@ -1,0 +1,28 @@
+首先介绍几个简单的linux命令。
+pwd 显示当前的路径
+cd 改变当前路径，无参数时进入对应用户的home目录
+ls 列出当前目录下的文件。此命令有N多参数，比如ls -al
+ps 列出当前系统进程
+kill 杀死某个进程
+mkdir 建立目录
+rmdir 删除目录
+rm 删除文件
+mv 文件改名或目录改名
+man 联机帮助
+less 显示文件的最末几行
+ll --time-style=long-iso -rt 格式化文件时间并按时间排序
+cp -a /a/* /b/ 拷贝a目录下面的文件到b
+
+#压缩
+tar -czvf ***.tar.gz
+tar -cjvf ***.tar.bz2
+#解压缩
+tar -xzvf ***.tar.gz
+tar -xjvf ***.tar.bz2
+
+
+chmod u+x file                　　　   给file的属主增加执行权限
+
+git加载密钥
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa

@@ -1,0 +1,94 @@
+
+maven打包不同jdk版本的包
+POM加入如下配置
+执行命令：clean install -P jdk16
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${jar.source}</source>
+                    <target>${jar.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <jar.source>${java.version}</jar.source>
+                <jar.target>${java.version}</jar.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>jdk16</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <classifier>jdk16</classifier>
+                        </configuration>
+                        <!--
+                        <executions>
+                          <execution>
+                            <phase>package</phase>
+                            <goals>
+                              <goal>jar</goal>
+                            </goals>
+                            <configuration>
+                              <classifier>jdk16</classifier>
+                            </configuration>
+                          </execution>
+                        </executions>
+                        -->
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <jar.source>1.6</jar.source>
+                <jar.target>1.6</jar.target>
+            </properties>
+        </profile>
+    </profiles>
+
+引用方式：
+
+    <!-- 引用1.8编译版本 -->
+    <dependency>
+      <groupId>xx.xx</groupId>
+      <artifactId>xxx</artifactId>
+      <version>0.1</version>
+    </dependency>
+    <!-- 引用1.6编译版本 -->
+    <dependency>
+      <groupId>xx.xx</groupId>
+      <artifactId>xxx</artifactId>
+      <version>0.1</version>
+      <classifier>jdk16</classifier>
+    </dependency>
+
+
+
+通过反编译.class文件来查看
+
+解压.jar包，能得到.class文件。用JDK自带的javap反编译.class文件，用如下命令：
+
+javap -verbose Configuration.class
+查看得到的信息中，major version属性的内容，如下
+    major version: 52
+说明这个.class文件是由JDK1.8编译得到的。
+    J2SE 6.0 = 50 (0x32 hex)
+    J2SE 5.0 = 49 (0x31 hex)
+    JDK 1.4 = 48 (0x30 hex)
+    JDK 1.3 = 47 (0x2F hex)
+    JDK 1.2 = 46 (0x2E hex)
+    JDK 1.1 = 45 (0x2D hex)
