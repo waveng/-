@@ -1,4 +1,4 @@
-alt+?或alt+/：自动补全代码或者提示代码
+alt+? 或 alt+/：自动补全代码或者提示代码
 Ctrl+Shift+G 查找类、方法和属性的引用
 Ctrl+Alt+H 如果你想知道一个类的方法到底被那些其他的类调用
 ctrl+o：快速outline视图
@@ -15,7 +15,6 @@ ctrl+shift+/：自动注释掉选择的代码块
 ctrl+d：删除当前行
 ctrl+shift+x和ctrl+shift+y：英文字母大小写的转换
 ctrl+shift+o：自动引入包和删除无用包
-
 
 Ctrl+1 快速修复(最经典的快捷键,就不用多说了)
 Ctrl+D: 删除当前行
