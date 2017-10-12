@@ -13,13 +13,13 @@ less 显示文件的最末几行
 ll --time-style=long-iso -rt 格式化文件时间并按时间排序
 cp -a /a/* /b/ 拷贝a目录下面的文件到b
 
-#压缩
+压缩
 tar -czvf ***.tar.gz
 tar -cjvf ***.tar.bz2
-#解压缩
+
+解压缩
 tar -xzvf ***.tar.gz
 tar -xjvf ***.tar.bz2
-
 
 chmod u+x file                　　　   给file的属主增加执行权限
 
