@@ -4,4 +4,4 @@ tail -500f logs/sentry/sentry.log | perl -pe 's/(xxxx)/\e[1;31m$1\e[0m/g'
 tail -500f logs/sentry/sentry.log | perl -pe 's/(\[\w+\](={6}\[.*\]))|(^\[\w+\](={6}\[.*\r*\n*.*\])$)/\e[1;31m$1\e[0m/g'
 tail -500f logs/sentry/sentry.log | perl -pe 's/(\[\w+\](={6}\[.*\r*\n*.*\]))/\e[1;31m$1\e[0m/g'
 双色显示：
-tail -500f logs/sentry/sentry.log | perl -pe 's/(\[\w+\])((={6}\[\w+\])|(={6}\[.*])*)/\e[1;32m$1\e[0m\e[1;31m$2\e[0m/g'
+tail -500f logs/sentry/sentry.log | perl -pe 's/(\[\w+\])(={6}\[.*])/\e[1;32m$1\e[0m\e[1;31m$2\e[0m/g'
