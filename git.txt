@@ -11,6 +11,9 @@
 版本回退：git reset -- hard 版本号
           git reset -- hard HEAD/HEAD@{?}
 
+git log --graph --pretty=format:'%Cred%h%Creset -
+%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-
+commit --date=relative 
 
 查看分支：git branch
           git branch -a
@@ -34,6 +37,7 @@ ssh-add ~/.ssh/id_rsa
     1、设置Git的user name和email：
         git config --global user.name "xxx"
         git config --global user.email "xxxx@xxx.xxx"
+        git config --global color.ui true
 
     2、生成 key
         ssh-keygen -t rsa -C "xxx@xxx.xxx"
@@ -88,6 +92,8 @@ Git远程仓库管理
     git remote rm <repository> #删除远程仓库
 
 创建远程仓库
+
+    git init --bare sample.git  # 用初始化创建纯仓库
 
     git clone --bare robbin_site robbin_site.git # 用带版本的项目创建纯版本仓库
 
@@ -225,3 +231,24 @@ Git暂存管理
     git stash drop # 删除暂存区
 
     git stash pop #取出并删除
+
+GIT 标签
+
+    git tag #查看标签
+
+    git tag <name> #创建标签默认为当前提交点（HEAD） 
+
+    git tag <name>  <commit id> #在指定提交点创建标签
+
+    git tag -a <name> -m <msg> <commit id> #创建带有说明的标签
+
+    git show <tagname> #查看标签信息
+
+    git push origin <tagname> #推送一个标签到远程
+
+    git push origin --tag #推送所有标签到远程
+
+    git tag -d <tagname> #删除一个本地标签
+
+    git push origin :refs/tag/<tagname>  #删除远程标签
+
