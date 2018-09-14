@@ -11,6 +11,7 @@ Ctrl+T 快速显示当前类的继承结构
 Ctrl+W 关闭当前打开的文件
 Ctrl+H 全局搜索
 Ctrl+Shift+R 打开资源列表进行搜索
+Ctrl+Shift+T 查找类
 
 ctrl+shift+f：格式化代码
 ctrl+e：快速转换编辑器
@@ -55,6 +56,7 @@ Ctrl+Shift+F4 关闭所有打开的Editer
 Ctrl+Shift+X 把当前选中的文本全部变味小写
 Ctrl+Shift+Y 把当前选中的文本全部变为小写
 Ctrl+Shift+F 格式化当前代码
+Ctrl+Shift+T 查找类
 Ctrl+Shift+P 定位到对于的匹配符(譬如{}) (从前面定位后面时,光标要在匹配符里面,后面到前面,则反之)
 下面的快捷键是重构里面常用的,本人就自己喜欢且常用的整理一下(注:一般重构的快捷键都是Alt+Shift开头的了)
 Alt+Shift+R 重命名 (是我自己最爱用的一个了,尤其是变量和类的Rename,比手工方法能节省很多劳动力)
@@ -65,3 +67,5 @@ Alt+Shift+F 把Class中的local变量变为field变量 (比较实用的功能)
 Alt+Shift+I 合并变量(可能这样说有点不妥Inline)
 Alt+Shift+V 移动函数和变量(不怎么常用)
 Alt+Shift+Z 重构的后悔药(Undo)
+Alt+Shift+N 打开新建文件菜单
+Alt+Shift+P 编辑位置的块引用
