@@ -1,14 +1,17 @@
 alt+? 或 alt+/：自动补全代码或者提示代码
-Ctrl+Shift+G 查找类、方法和属性的引用
 Ctrl+Alt+H 如果你想知道一个类的方法到底被那些其他的类调用
+Ctrl+Shift+G 查找类、方法和属性的引用, 快速找到变量或方法的调用处
+Ctrl+Alt+G 在工作空间查找字符串在那些文件中出现
 Ctrl+Q 定位到最后编辑的地方
 Ctrl+L 定位在某行 (对于程序超过100的人就有福音了)
 Ctrl+M 最大化当前的Edit或View (再按则反之)
 Ctrl+/ 注释当前行,再按则取消注释
-Ctrl+O 快速显示 OutLin
+Ctrl+O 快速显示 Outline
 Ctrl+T 快速显示当前类的继承结构
+Ctrl+W 关闭当前打开的文件
+Ctrl+H 全局搜索
+Ctrl+Shift+R 打开资源列表进行搜索
 
-ctrl+shift+r：打开资源列表
 ctrl+shift+f：格式化代码
 ctrl+e：快速转换编辑器
 ctrl+page down或ctrl+page up： 选项卡之间快速切换
